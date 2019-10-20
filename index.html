@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <title>ti.me</title>
+
+    <link rel="icon" type="image/png" href="img/clock.png">
+
+    <style>
+      html {
+        background-color: #F8F8F8;
+        font-family: 'Playfair Display', serif;
+      }
+
+      section {
+        height: 90vh;
+        width: 100vw;
+        text-align: center;
+        display: table-cell;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+
+      h1, h3 {
+        color: #0a0e27;
+        display: inline-block;        
+      }
+
+      h1 {
+        font-size: 10em;
+      }
+
+      h3 {
+        font-size: 5em;
+      }
+    </style>
+
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var dnc = "AM";
+
+        m = checkTime(m);
+        s = checkTime(s);
+        dnc = setDNC(h, dnc);
+        h = setHour(h);
+
+        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+        document.getElementById('dnc').innerHTML = dnc;
+        var t = setTimeout(startTime, 500);
+      }
+
+      //checks if (number < 10), adds a 0 in front if so
+      function checkTime(i) {
+        if(i < 10) {
+          i = "0" + i;
+        }
+
+        return i;
+      }
+
+      //disable military time
+      function setHour(i) {
+        if(i === 0) {
+          i = 12;
+        } else if(i > 12) {
+          i = i - 12;
+        }
+
+        return i;
+      }
+
+      //checks whether it's AM or PM
+      function setDNC(i, dnc) {
+        if(i === 0) {
+          dnc = "AM";
+        } else if(i > 12) {
+          dnc = "PM";
+        }
+
+        return dnc;
+      }
+    </script>
+  </head>
+
+  <body onload="startTime()">
+    <section>
+      <h1 id="time"></h1>
+      <h3 id = "dnc"></h3>
+    </section>    
+  </body>
+</html>
