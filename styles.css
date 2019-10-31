@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Playfair Display', serif;
+}
+
+h1, h3 {
+    margin: 0;
+    color: #0C181D;
+    user-select: none;
+    display: inline-flex;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    flex-direction: column;
+    justify-content: center;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+h1 {
+    font-size: 10em;
+}
+
+h3 {
+    font-size: 5em;
+}
+
+button {
+    width: 50vw;
+}
+
+button#lm {
+    left: 0;
+    bottom: 0;    
+}
+
+button#dm {
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-color: #0C181D;
+}
+
+div#content {
+    padding-top: 25vh;
+    text-align: center;
+}
+
+div#mode {
+    bottom: 0;
+    width: 100vw;
+    position: fixed;
+    text-align: center;
+    flex-direction: row;
+}
+
+div#wrapper {
+    height: 100vh;
+}
