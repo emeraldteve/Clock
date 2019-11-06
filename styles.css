@@ -8,7 +8,6 @@ html {
 }
 
 h1, h3 {
-    margin: 0;
     color: #0C181D;
     user-select: none;
     display: inline-flex;
@@ -29,35 +28,15 @@ h3 {
     font-size: 5em;
 }
 
-button {
-    width: 50vw;
+#content {
+    flex: 1;
 }
 
-button#lm {
-    left: 0;
-    bottom: 0;    
+#mode {
+    flex: 1;
 }
 
-button#dm {
-    right: 0;
-    bottom: 0;
-    color: white;
-    background-color: #0C181D;
-}
-
-div#content {
-    padding-top: 25vh;
-    text-align: center;
-}
-
-div#mode {
-    bottom: 0;
-    width: 100vw;
-    position: fixed;
-    text-align: center;
-    flex-direction: row;
-}
-
-div#wrapper {
-    height: 100vh;
+#wrapper {
+    display: flex;
+    flex-flow: column nowrap;
 }
