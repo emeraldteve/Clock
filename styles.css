@@ -14,7 +14,7 @@ a, h1, h3, img {
 }
 
 h1, h3 {
-    transition: color 0.6s ease-in-out;
+    transition: color 0.6s linear;
 }
 
 h1 {
@@ -62,5 +62,5 @@ html {
     flex: 1;
     display: flex;
     justify-content: center;
-    transition: background 0.6s ease-in-out;
+    transition: background 0.6s linear;
 }
