@@ -3,46 +3,12 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="styles.css">
 
     <title>wtii</title>
 
     <link rel="icon" type="image/png" href="img/clock.png">
-
-    <style>
-      html {
-        cursor: none;
-        user-select: none;
-        -ms-user-select: none;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        background-color: #F8F8F8;
-        -webkit-touch-callout: none;
-        font-family: 'Playfair Display', serif;
-      }
-
-      section {
-        height: 90vh;
-        width: 100vw;
-        text-align: center;
-        display: table-cell;
-        white-space: nowrap;
-        vertical-align: middle;
-      }
-
-      h1, h3 {
-        color: #0C181D;
-        display: inline-block;        
-      }
-
-      h1 {
-        font-size: 10em;
-      }
-
-      h3 {
-        font-size: 5em;
-      }
-    </style>
 
     <script>
       function startTime() {
@@ -96,9 +62,18 @@
   </head>
 
   <body onload="startTime()">
-    <section>
-      <h1 id="time"></h1>
-      <h3 id = "dnc"></h3>
-    </section>    
+    <div id = "container">
+      <div id = "wrapper">
+        <h1 id = "time"></h1>
+        <h3 id = "dnc"></h3>
+      </div>
+
+      <div id = "mode">
+        <a id = "lm" href = "#lm" onclick = "lightmode(); return false;"><img id = "lm-img" src = "img/sun.png" alt = "sun by yejinland from the Noun Project"></a>
+        <a id = "dm" href = "#dm" onclick = "darkmode(); return false;"><img id = "dm-img" src = "img/moon.png" alt = "Moon by SilverFOX Studio from the Noun Project"></a>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
