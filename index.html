@@ -3,6 +3,7 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="styles.css">
 
     <title>wtii</title>
@@ -61,16 +62,18 @@
   </head>
 
   <body onload="startTime()">
-    <div id = "wrapper">
-      <div id = "content">
-        <h1 id="time"></h1>
+    <div id = "container">
+      <div id = "wrapper">
+        <h1 id = "time"></h1>
         <h3 id = "dnc"></h3>
       </div>
 
       <div id = "mode">
-        <button id = "lm">light mode</a>
-        <button id = "dm">dark mode</a>
+        <a href = "#lm" onclick = "lightmode(); return false;" id = "lm"><img id = "lm-img" src = "img/sun.png" alt = "sun by yejinland from the Noun Project"></a>
+        <a href = "#dm" id = "dm"><img id = "dm-img" src = "img/moon.png" alt = "Moon by SilverFOX Studio from the Noun Project"></a>
       </div>
     </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>

@@ -1,16 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-family: 'Playfair Display', serif;
-}
-
-h1, h3 {
+a, h1, h3, img {
     color: #0C181D;
     user-select: none;
     display: inline-flex;
+    text-decoration: none;
     -ms-user-select: none;
     -moz-user-select: none;
     flex-direction: column;
@@ -21,22 +13,47 @@ h1, h3 {
 }
 
 h1 {
-    font-size: 10em;
+    font-size: 5rem;
 }
 
 h3 {
-    font-size: 5em;
+    font-size: 2rem;
 }
 
-#content {
-    flex: 1;
+html {
+    font-family: 'Playfair Display', serif;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    flex-flow: column nowrap;
 }
 
 #mode {
-    flex: 1;
+    flex: 0;
+    display: flex;
+    align-items: center;
+}
+
+#mode a {
+    width: 50%;
+    height: 30px;
+    padding: 20px 0;
+}
+
+#mode a:last-of-type {
+    background: #0C181D;
+}
+
+#mode a img {
+    height: 30px;
+    object-fit: contain;
 }
 
 #wrapper {
+    flex: 1;
     display: flex;
-    flex-flow: column nowrap;
+    justify-content: center;
 }
