@@ -13,6 +13,10 @@ a, h1, h3, img {
     -webkit-touch-callout: none;
 }
 
+a:focus {
+    outline: none;
+}
+
 h1, h3 {
     transition: color 0.6s linear;
 }
